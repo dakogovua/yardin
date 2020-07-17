@@ -1,0 +1,475 @@
+.section {
+
+	position: relative;
+/*	height: 100vh; */
+}
+
+.section .section-center {
+	position: relative;
+	top: 20%;
+	left: 0;
+	right: 0;
+	/* -webkit-transform: translateY(-50%);
+	transform: translateY(-50%); */
+
+/*	-webkit-transform: translateY(0);
+	transform: translateY(0);*/
+}
+
+#booking {
+	font-family: 'PT Sans', sans-serif;
+
+}
+
+.booking-form {
+	/*background: rgba(0, 0, 0, 0.7);*/
+	background: rgba(78, 29, 121, 0.56);
+/* 	padding: 40px; */
+	padding: 5px;
+	/* border-radius: 6px; */
+	border-radius: 6px;
+}
+
+.booking-form .form-group {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+	background-color: #fff;
+	height: 50px;
+	color: #191a1e;
+	border: none;
+	font-size: 16px;
+	font-weight: 400;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 40px;
+	padding: 0px 19px;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+	color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+	color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form .form-control::placeholder {
+	color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form input[type="date"].form-control:invalid {
+	color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.booking-form select.form-control+.select-arrow {
+	position: absolute;
+	right: 10px;
+	bottom: 6px;
+	width: 32px;
+	line-height: 32px;
+	height: 32px;
+	text-align: center;
+	pointer-events: none;
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+}
+
+/*
+.booking-form select.form-control+.select-arrow.kkarrow {
+
+	right: 123px;
+
+} */
+
+.booking-form select.form-control+.select-arrow:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 24px;
+	height: 24px;
+	font-size: 12px;
+	color: #fff;
+}
+
+.booking-form .form-checkbox input {
+	position: absolute !important;
+	margin-left: -9999px !important;
+	visibility: hidden !important;
+}
+
+.booking-form .form-checkbox label {
+	position: relative;
+	padding-top: 4px;
+	padding-left: 30px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.booking-form .form-checkbox label+label {
+	margin-left: 15px;
+}
+
+.booking-form .form-checkbox input+span {
+	position: absolute;
+	left: 2px;
+	top: 4px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.booking-form .form-checkbox input+span:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0px;
+	height: 0px;
+	border-radius: 50%;
+	background-color: #f23e3e;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.booking-form .form-checkbox input:not(:checked)+span:after {
+	opacity: 0;
+}
+
+.booking-form .form-checkbox input:checked+span:after {
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+}
+
+.booking-form .form-btn {
+	margin-top: 27px;
+}
+
+.booking-form .submit-btn {
+	color: #fff;
+	background-color: #f23e3e;
+	font-weight: 400;
+	height: 50px;
+	font-size: 14px;
+	border: none;
+	width: 100%;
+	border-radius: 40px;
+	text-transform: uppercase;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .add-btn {
+	color: #fff;
+	background-color: #2196f3;
+	font-weight: 400;
+	height: 50px;
+	font-size: 14px;
+	border: none;
+	width: 100%;
+	border-radius: 40px;
+	text-transform: uppercase;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+	opacity: 0.9;
+}
+
+.container-kk {
+	height: 30px;
+	display: block;
+	position: relative;
+	padding-left: 70px;
+	margin-bottom:24px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-kk input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 3px;
+	left: 20px;
+	height: 40px;
+	width: 40px;
+	background-color: #fff;
+}
+
+.checkmark.disabled {
+	background-color: #e9ecef;
+}
+
+/* On mouse-over, add a grey background color */
+.container-kk:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-kk input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.container-kk input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-kk .checkmark:after {
+	left: 18px;
+	top: 10px;
+	width: 10px;
+	height: 20px;
+	border: solid white;
+	border-width: 0 6px 6px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 600px) {
+	.section .section-center {
+		top: 20px;
+/*		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		*/
+	}
+
+	.vue-js-switch, .v-switch-core {
+		width: 100%;
+	}
+
+		span.v-switch-label.v-right {
+			/*    left: 50px !important;
+			right: 128px !important;*/
+
+		}
+}
+
+@media only screen and (max-width: 320px) {
+	span.v-switch-label.v-right {
+
+		right: 78px !important;
+
+	}
+}
+
+
+.form-header {
+	text-align: center;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.form-header h1 {
+	font-weight: 700;
+	text-transform: capitalize;
+	font-size: 42px;
+	margin: 0px;
+	color: #fff;
+}
+
+select.form-control:disabled, input.form-control:disabled {
+	background-color: #eee !important;
+	opacity: 1;
+}
+
+/* **/
+
+
+.tooltip {
+	display: block !important;
+	z-index: 10000;
+}
+
+.tooltip .tooltip-inner {
+	background-color: #5bc0de;
+	border-color: #46b8da;
+	color: white;
+	border-radius: 16px;
+	padding: 5px 10px 4px;
+}
+
+.tooltip .tooltip-arrow {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	position: absolute;
+	margin: 5px;
+	border-color: black;
+	z-index: 1;
+}
+
+.tooltip[x-placement^="top"] {
+	margin-bottom: 5px;
+}
+
+.tooltip[x-placement^="top"] .tooltip-arrow {
+	border-width: 5px 5px 0 5px;
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+	border-bottom-color: transparent !important;
+	bottom: -5px;
+	left: calc(50% - 5px);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.tooltip[x-placement^="bottom"] {
+	margin-top: 5px;
+}
+
+.tooltip[x-placement^="bottom"] .tooltip-arrow {
+	border-width: 0 5px 5px 5px;
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+	border-top-color: transparent !important;
+	top: -5px;
+	left: calc(50% - 5px);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.tooltip[x-placement^="right"] {
+	margin-left: 5px;
+}
+
+.tooltip[x-placement^="right"] .tooltip-arrow {
+	border-width: 5px 5px 5px 0;
+	border-left-color: transparent !important;
+	border-top-color: transparent !important;
+	border-bottom-color: transparent !important;
+	left: -5px;
+	top: calc(50% - 5px);
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.tooltip[x-placement^="left"] {
+	margin-right: 5px;
+}
+
+.tooltip[x-placement^="left"] .tooltip-arrow {
+	border-width: 5px 0 5px 5px;
+	border-top-color: transparent !important;
+	border-right-color: transparent !important;
+	border-bottom-color: transparent !important;
+	right: -5px;
+	top: calc(50% - 5px);
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.tooltip.popover .popover-inner {
+	background: #f9f9f9;
+	color: black;
+	padding: 24px;
+	border-radius: 5px;
+	box-shadow: 0 5px 30px rgba(black, .1);
+}
+
+.tooltip.popover .popover-arrow {
+	border-color: #f9f9f9;
+}
+
+.tooltip[aria-hidden='true'] {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .15s, visibility .15s;
+}
+
+.tooltip[aria-hidden='false'] {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity .15s;
+}
+
+.white {
+	color: white;
+	cursor: pointer;
+	padding-left: 2px;
+}
+
+.kossflex {
+	display: flex;
+	word-spacing:2px;
+	/*justify-content: space-between;*/
+}
+
+span.error, span.form-label.error {
+    color: #f5f02d;
+}
+
+select, button.add-btn:hover, button#kmyBtn:hover {
+	cursor: pointer;
+}
+
+
+
+#manytimes span.v-switch-label {
+	font-size: 1.4em;
+}
+
+#manytimes span.v-switch-label.v-right {
+	right: 20px !important;
+}
+
+#accept span.v-switch-label.v-right {
+	right: 0 !important;
+	left: 42px;
+}
+
+#accept span.v-switch-label.v-left {
+	font-size: 0.89em;
+}
+
+
+.form-group, .center table {
+	color: black;
+}
+
+.accordionklass .accordion--content {
+	color: black;	
+}
