@@ -15,7 +15,7 @@
     "axios-extensions": "^3.0.3",
     "express": "^4.16.4",
     "jade": "^1.11.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "sendemail": "^3.4.0",
     "sha1": "^1.1.1",
     "v-tooltip": "^2.0.0-rc.33",
